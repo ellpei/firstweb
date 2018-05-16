@@ -4,21 +4,22 @@
     <title>Hello World</title>
   </head>
   <body>
-    <h1>Welcome to my first webpage!</h1>
-    <h1 onclick="changeText(this)">Click on this text!</h1>
+    <div id="header">
+      <h1>Welcome to my first webpage!</h1>
+      <img src="Images/DSC_0016-1.jpg" alt="" width="500px">
+    </div>
+    <br>
     <button type="submit" id = "btn" onclick="foo()">Submit</button>
-    <p id="test">Test</p>
+    <div id="count">0</div>
+    <a href="about.html">About</a>
 
-<script>
-function changeText(id) {
-    id.innerHTML = "Ooops!";
-}
-var clicks = 0;
-function foo() {
-  clicks++;
-  document.getElementById("test").innerHTML = clicks;
-}
-</script>
+    <script>
+    var count = 0;
+      function foo() {
+        count = count + 1;
+        document.getElementById("count").innerHTML = count;
+      }
+    </script>
 
-</body>
+  </body>
 </html>
